@@ -1,4 +1,4 @@
-# React Vitae App
+# Book store Frontend App
 
 This template provides a minimal setup to get a React application working with Vite. It features Hot Module Replacement (HMR) and includes ESLint rules for better code quality. 
 
@@ -27,8 +27,8 @@ Follow these steps to set up the React Vitae app:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/react-vitae.git
-   cd react-vitae
+   git clone https://github.com/katfogy/book-store-frontend.git
+   cd book-store-frontend
 npm install
 # or
 yarn install
