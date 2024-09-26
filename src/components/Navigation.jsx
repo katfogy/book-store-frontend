@@ -1,13 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';  // Import useNavigate
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 const Navigation = () => {
     const token = localStorage.getItem('token');  // Check if token exists
+    const navigate = useNavigate();  // Initialize useNavigate
 
     const handleLogout = () => {
         localStorage.removeItem('token');  // Remove token from localStorage
-        window.location.href = '/login';  // Redirect to login page
+        navigate('/login');  // Use navigate to redirect to login page
     };
 
     return (
@@ -23,7 +24,7 @@ const Navigation = () => {
 
                         {/* Conditionally render Logout or Login based on token */}
                         {token ? (
-                            <Nav.Link as={Link} onClick={handleLogout}>Logout</Nav.Link>
+                            <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
                         ) : (
                             <Nav.Link as={Link} to="/login">Login</Nav.Link>
                         )}
